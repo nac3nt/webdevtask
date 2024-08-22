@@ -1,3 +1,42 @@
 <div class="main-container">
-  <h2 class="header">YAY! It's BOGO</h2>
+  <h2 class="header-section">YAY! It's BOGO</h2>
+
+  <div class="mid-section">
+    <div class="option-list">
+      <ng-container *ngIf="!option1Active; else option1Clicked">
+        <div class="option" (click)="activateOption('option1')">
+          <div class="left-section">
+            <p>30% Off</p>
+          </div>
+          <div class="right-section">
+            <div class="radio-option">
+              <input type="radio" name="option1" [checked]="option1Active" />
+              <div class="offer-text">
+                <p>Buy 2 Get 4</p>
+                <p>{{ 18 | currency:'USD' }} USD</p>
+              </div>
+            </div>
+            <p>Most popular</p>
+          </div>
+        </div>
+      </ng-container>
+      <ng-template #option1Clicked>
+        <input type="radio" name="option1" [checked]="option1Active" />
+      </ng-template>
+    </div>
+    <div class="mid-section-info">
+      <p>Free Delivery</p>
+      <p>Total: {{ totalCost | currency:'USD' }} USD</p>
+    </div>
+  </div>
+
+  <div class="footer-section">
+
+    <button class="add-to-cart-button">
+      <i class="fa-solid fa-plus plus-icon"></i>
+      <p>Add to Cart</p>
+    </button>
+
+    <p class="footer-section-text">Powered by <span>Pumper</span></p>
+  </div>
 </div>

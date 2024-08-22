@@ -24,6 +24,10 @@ body {
     min-height: 100vh; /* Center the form vertically and horizontally */
     padding: 20px; /* Add some padding for better spacing */
 }
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
   
 /* Improve text readability and layout on smaller screens */
 @media (max-width: 768px) {
