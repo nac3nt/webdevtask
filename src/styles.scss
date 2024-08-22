@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f6f6f7;
+    height: 100%;
+    width: 100%;
+}
+  
+/* Ensure all elements inherit box-sizing to include padding and border in element’s total width and height */
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+  
+/* Make the form full-screen centered */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Center the form vertically and horizontally */
+    padding: 20px; /* Add some padding for better spacing */
+}
+  
+/* Improve text readability and layout on smaller screens */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+}
+  
