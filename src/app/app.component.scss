@@ -11,10 +11,7 @@ $white-color: #FFFFFF;
     justify-content: center;
     align-items: center;
     width: fit-content;
-
-    .invisible-text {
-        opacity: 0;
-    }
+    min-width: 450px;
 
     .header-section {
         font-weight: 700;
@@ -220,6 +217,10 @@ $white-color: #FFFFFF;
 
             p:nth-child(2) {
                 font-weight: 500;
+                
+                span {
+                    font-weight: 600;
+                }
             }
         }
     }
