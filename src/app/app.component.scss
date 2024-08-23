@@ -118,6 +118,20 @@ $white-color: #FFFFFF;
                     justify-content: center;
                     align-items: center;
                     border-radius: 12px 0 0 12px;
+                    position: relative;
+                    
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        height: 2px;
+                        width: 100%;
+                    }
+                      
+                    &:after {
+                        right: -38px;
+                        rotate: 90deg;
+                        background: radial-gradient(circle, transparent, transparent 50%, $white-color 50%, $white-color 100% ) -1px -3px / 16px 6px repeat-x,
+                    }
 
                     p {
                         font-size: 18px;
