@@ -19,7 +19,7 @@
                 <p>{{ 18 | currency:'USD' }} USD</p>
               </div>
             </div>
-            <p class="right-section-text">Most popular</p>
+            <p class="right-section-text"></p>
           </div>
         </div>
       </ng-container>
@@ -33,6 +33,114 @@
             <div class="offer-text">
               <p>Buy 1 Get 2 <span class="offer-rate">30% Off</span></p>
               <p>{{ 18 | currency:'USD' }} USD <span class="prev-cost">{{ 10 | currency: 'USD'}}</span></p>
+            </div>
+          </div>
+          <form class="pref-section">
+            <h6></h6>
+            <h6>Size</h6>
+            <h6>Colour</h6>
+            <h6>#1</h6>
+            <select name="" id="">
+              <option value="volvo">S</option>
+            </select>
+            <select name="" id="">
+              <option value="volvo">Colour</option>
+            </select>
+            <h6>#2</h6>
+            <select name="" id="">
+              <option value="volvo">S</option>
+            </select>
+            <select name="" id="">
+              <option value="volvo">Colour</option>
+            </select>
+          </form>
+        </div>
+      </ng-template>
+
+      <ng-container *ngIf="!option2Active; else option2Clicked">
+        <div class="option" (click)="activateOption('option2')">
+          <div class="left-section">
+            <p>30% Off</p>
+          </div>
+          <div class="right-section">
+            <div class="radio-option">
+              <label class="radio-input">
+                <input type="radio" name="option1"/>
+                <span class="radio-check"></span>
+              </label>
+              <div class="offer-text">
+                <p>Buy 2 Get 4</p>
+                <p>{{ 24 | currency:'USD' }} USD</p>
+              </div>
+            </div>
+            <p class="right-section-text">Most popular</p>
+          </div>
+        </div>
+      </ng-container>
+      <ng-template #option2Clicked>
+        <div class="option-activated">
+          <div class="radio-option">
+            <label class="radio-input">
+              <input type="radio" name="option2" [checked]="option2Active"/>
+              <span class="radio-check"></span>
+            </label>
+            <div class="offer-text">
+              <p>Buy 2 Get 4 <span class="offer-rate">30% Off</span></p>
+              <p>{{ 24 | currency:'USD' }} USD <span class="prev-cost">{{ 10 | currency: 'USD'}}</span></p>
+            </div>
+          </div>
+          <form class="pref-section">
+            <h6></h6>
+            <h6>Size</h6>
+            <h6>Colour</h6>
+            <h6>#1</h6>
+            <select name="" id="">
+              <option value="volvo">S</option>
+            </select>
+            <select name="" id="">
+              <option value="volvo">Colour</option>
+            </select>
+            <h6>#2</h6>
+            <select name="" id="">
+              <option value="volvo">S</option>
+            </select>
+            <select name="" id="">
+              <option value="volvo">Colour</option>
+            </select>
+          </form>
+        </div>
+      </ng-template>
+
+      <ng-container *ngIf="!option3Active; else option3Clicked">
+        <div class="option" (click)="activateOption('option3')">
+          <div class="left-section">
+            <p>10% Off</p>
+          </div>
+          <div class="right-section">
+            <div class="radio-option">
+              <label class="radio-input">
+                <input type="radio" name="option1"/>
+                <span class="radio-check"></span>
+              </label>
+              <div class="offer-text">
+                <p>Buy 3 Get 6</p>
+                <p>{{ 36 | currency:'USD' }} USD</p>
+              </div>
+            </div>
+            <p class="right-section-text"></p>
+          </div>
+        </div>
+      </ng-container>
+      <ng-template #option3Clicked>
+        <div class="option-activated">
+          <div class="radio-option">
+            <label class="radio-input">
+              <input type="radio" name="option3" [checked]="option3Active"/>
+              <span class="radio-check"></span>
+            </label>
+            <div class="offer-text">
+              <p>Buy 3 Get 6 <span class="offer-rate">10% Off</span></p>
+              <p>{{ 36 | currency:'USD' }} USD <span class="prev-cost">{{ 10 | currency: 'USD'}}</span></p>
             </div>
           </div>
           <form class="pref-section">
