@@ -1,0 +1,222 @@
+<div class="main-container">
+  <!-- Header Section: Contains the main title -->
+  <header class="header-section">
+    <h2>YAY! It's BOGO</h2>
+  </header>
+
+  <!-- Main Content Section: Contains the product options and additional info -->
+  <section class="mid-section">
+    
+    <!-- Option List: Displays different product options -->
+    <article class="option-list">
+
+      <!-- Option 1: Displays when option1 is not active -->
+      <ng-container *ngIf="!option1Active; else option1Clicked">
+        <div class="option" (click)="activateOption('option1')">
+          <!-- Left Section: Discount info -->
+          <div class="left-section">
+            <p>30% Off</p>
+          </div>
+          <!-- Right Section: Radio button and offer details -->
+          <div class="right-section">
+            <div class="radio-option">
+              <label class="radio-input">
+                <input type="radio" name="option1" />
+                <span class="radio-check"></span>
+              </label>
+              <div class="offer-text">
+                <p>Buy 1 Get 2</p>
+                <p>{{ 18 | currency: 'USD' }} USD</p>
+              </div>
+            </div>
+            <!-- Invisible Text: Placeholder for consistency -->
+            <p class="right-section-text"></p>
+          </div>
+        </div>
+      </ng-container>
+
+      <!-- Option 1 (Activated): Displays when option1 is active -->
+      <ng-template #option1Clicked>
+        <div class="option-activated">
+          <div class="radio-option">
+            <label class="radio-input">
+              <input type="radio" name="option1" [checked]="option1Active" />
+              <span class="radio-check"></span>
+            </label>
+            <div class="offer-text">
+              <p>Buy 1 Get 2 <span class="offer-rate">30% Off</span></p>
+              <p>{{ 18 | currency: 'USD' }} USD 
+                <span class="prev-cost">{{ 10 | currency: 'USD' }}</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Preference Form: Allows user to select size and color -->
+          <form class="pref-section">
+              <h6></h6>
+              <h6>Size</h6>
+              <h6>Colour</h6>
+              <h6>#1</h6>
+              <select name="size1" id="size1">
+                <option value="S">S</option>
+              </select>
+              <select name="color1" id="color1">
+                <option value="Color">Colour</option>
+              </select>
+              <h6>#2</h6>
+              <select name="size2" id="size2">
+                <option value="S">S</option>
+              </select>
+              <select name="color2" id="color2">
+                <option value="Color">Colour</option>
+              </select>
+          </form>
+        </div>
+      </ng-template>
+
+      <!-- Option 2: Displays when option2 is not active -->
+      <ng-container *ngIf="!option2Active; else option2Clicked">
+        <div class="option" (click)="activateOption('option2')">
+          <!-- Left Section: Discount info -->
+          <div class="left-section">
+            <p>30% Off</p>
+          </div>
+          <!-- Right Section: Radio button and offer details -->
+          <div class="right-section">
+            <div class="radio-option">
+              <label class="radio-input">
+                <input type="radio" name="option1" />
+                <span class="radio-check"></span>
+              </label>
+              <div class="offer-text">
+                <p>Buy 2 Get 4</p>
+                <p>{{ 24 | currency: 'USD' }} USD</p>
+              </div>
+            </div>
+            <!-- Invisible Text: Placeholder for consistency -->
+            <p class="right-section-text">Most popular</p>
+          </div>
+        </div>
+      </ng-container>
+
+      <!-- Option 2 (Activated): Displays when option2 is active -->
+      <ng-template #option2Clicked>
+        <div class="option-activated">
+          <div class="radio-option">
+            <label class="radio-input">
+              <input type="radio" name="option2" [checked]="option2Active" />
+              <span class="radio-check"></span>
+            </label>
+            <div class="offer-text">
+              <p>Buy 2 Get 4 <span class="offer-rate">30% Off</span></p>
+              <p>{{ 24 | currency: 'USD' }} USD 
+                <span class="prev-cost">{{ 10 | currency: 'USD' }}</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Preference Form: Allows user to select size and color -->
+          <form class="pref-section">
+              <h6></h6>
+              <h6>Size</h6>
+              <h6>Colour</h6>
+              <h6>#1</h6>
+              <select name="size1" id="size1">
+                <option value="S">S</option>
+              </select>
+              <select name="color1" id="color1">
+                <option value="Color">Colour</option>
+              </select>
+              <h6>#2</h6>
+              <select name="size2" id="size2">
+                <option value="S">S</option>
+              </select>
+              <select name="color2" id="color2">
+                <option value="Color">Colour</option>
+              </select>
+          </form>
+        </div>
+      </ng-template>
+
+      <!-- Option 3: Displays when option3 is not active -->
+      <ng-container *ngIf="!option3Active; else option3Clicked">
+        <div class="option" (click)="activateOption('option3')">
+          <!-- Left Section: Discount info -->
+          <div class="left-section">
+            <p>10% Off</p>
+          </div>
+          <!-- Right Section: Radio button and offer details -->
+          <div class="right-section">
+            <div class="radio-option">
+              <label class="radio-input">
+                <input type="radio" name="option1" />
+                <span class="radio-check"></span>
+              </label>
+              <div class="offer-text">
+                <p>Buy 3 Get 6</p>
+                <p>{{ 36 | currency: 'USD' }} USD</p>
+              </div>
+            </div>
+            <!-- Invisible Text: Placeholder for consistency -->
+            <p class="right-section-text"></p>
+          </div>
+        </div>
+      </ng-container>
+
+      <!-- Option 3 (Activated): Displays when option3 is active -->
+      <ng-template #option3Clicked>
+        <div class="option-activated">
+          <div class="radio-option">
+            <label class="radio-input">
+              <input type="radio" name="option2" [checked]="option3Active" />
+              <span class="radio-check"></span>
+            </label>
+            <div class="offer-text">
+              <p>Buy 3 Get 6 <span class="offer-rate">10% Off</span></p>
+              <p>{{ 36 | currency: 'USD' }} USD 
+                <span class="prev-cost">{{ 10 | currency: 'USD' }}</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Preference Form: Allows user to select size and color -->
+          <form class="pref-section">
+              <h6></h6>
+              <h6>Size</h6>
+              <h6>Colour</h6>
+              <h6>#1</h6>
+              <select name="size1" id="size1">
+                <option value="S">S</option>
+              </select>
+              <select name="color1" id="color1">
+                <option value="Color">Colour</option>
+              </select>
+              <h6>#2</h6>
+              <select name="size2" id="size2">
+                <option value="S">S</option>
+              </select>
+              <select name="color2" id="color2">
+                <option value="Color">Colour</option>
+              </select>
+          </form>
+        </div>
+      </ng-template>
+
+    </article>
+
+    <!-- Supplementary Info: Free delivery and total cost -->
+    <aside class="mid-section-info">
+      <p>Free Delivery</p>
+      <p>Total: <span>{{ totalCost | currency: 'USD' }} USD</span></p>
+    </aside>
+  </section>
+
+  <!-- Footer Section: Add to cart button and footer text -->
+  <footer class="footer-section">
+    <button class="add-to-cart-button">
+      <i class="fa-solid fa-plus plus-icon"></i>
+      <p>Add to Cart</p>
+    </button>
+    <p class="footer-section-text">Powered by <span>Pumper</span></p>
+  </footer>
+</div>
