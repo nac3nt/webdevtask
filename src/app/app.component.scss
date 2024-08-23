@@ -128,14 +128,14 @@ $white-color: #FFFFFF;
                     &:after {
                         content: '';
                         position: absolute;
-                        height: 2px;
+                        height: 3px;
                         width: 100%;
                     }
                       
                     &:after {
                         right: -39px;
                         rotate: 90deg;
-                        background: radial-gradient(circle, transparent, transparent 50%, $theme-pink 90%, $white-color 60% ) -1px -3px / 16px 6px repeat-x,
+                        background: radial-gradient(circle, transparent, transparent 50%, $theme-pink 90%, $theme-pink 80% ) -1px -3px / 16px 6px repeat-x,
                     }
 
                     p {
