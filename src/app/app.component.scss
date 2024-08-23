@@ -3,7 +3,7 @@ $white-color: #FFFFFF;
 
 .main-container {
     background-color: #ffffff;
-    padding: 28px 50px;
+    padding: 1.75rem 3.125rem;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -11,7 +11,10 @@ $white-color: #FFFFFF;
     justify-content: center;
     align-items: center;
     width: fit-content;
-    min-width: 450px;
+
+    .opacity-0 {
+        opacity: 0;
+    }
 
     .header-section {
         font-weight: 700;
@@ -125,14 +128,14 @@ $white-color: #FFFFFF;
                     &:after {
                         content: '';
                         position: absolute;
-                        height: 2px;
+                        height: 3px;
                         width: 100%;
                     }
                       
                     &:after {
                         right: -39px;
                         rotate: 90deg;
-                        background: radial-gradient(circle, transparent, transparent 50%, $theme-pink 90%, $white-color 60% ) -1px -3px / 16px 6px repeat-x,
+                        background: radial-gradient(circle, transparent, transparent 50%, $theme-pink 90%, $theme-pink 80% ) -1px -3px / 16px 6px repeat-x,
                     }
 
                     p {
@@ -147,8 +150,8 @@ $white-color: #FFFFFF;
                     width: 100%;
                     padding: 0px 14px;
                     height: 100%;
-                    display: flex;
-                    flex-direction: row;
+                    display: grid;
+                    grid-template-columns: min-content auto;
                     gap: 30px;
                     align-items: center;
 
