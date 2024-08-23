@@ -12,6 +12,10 @@ $white-color: #FFFFFF;
     align-items: center;
     width: fit-content;
 
+    .invisible-text {
+        opacity: 0;
+    }
+
     .header-section {
         font-weight: 700;
         color: $theme-pink;
@@ -78,6 +82,7 @@ $white-color: #FFFFFF;
                     flex-direction: column;
                     gap: 6px;
                     font-size: 14px;
+                    white-space: nowrap;
 
                     .offer-rate {
                         background-color: $theme-pink;
@@ -147,13 +152,14 @@ $white-color: #FFFFFF;
                     height: 100%;
                     display: flex;
                     flex-direction: row;
-                    justify-content: space-between;
+                    gap: 30px;
                     align-items: center;
 
                     .right-section-text {
                         color: $theme-pink;
                         font-weight: 600;
                         font-size: 14px;
+                        text-align: right;
                     }
                 }
             }
@@ -224,6 +230,7 @@ $white-color: #FFFFFF;
         justify-content: center;
         align-items: center;
         gap: 7px;
+        width: 100%;
 
         .add-to-cart-button {
             border: none;
@@ -236,7 +243,8 @@ $white-color: #FFFFFF;
             justify-content: center;
             align-items: center;
             gap: 8px;
-            padding: 12.5px 125px;
+            padding: 12.5px 0px;
+            width: 100%;
             font-family: inherit;
             
             p {
