@@ -10,18 +10,51 @@
           </div>
           <div class="right-section">
             <div class="radio-option">
-              <input type="radio" name="option1" [checked]="option1Active" />
+              <label class="radio-input">
+                <input type="radio" name="option1"/>
+                <span class="radio-check"></span>
+              </label>
               <div class="offer-text">
-                <p>Buy 2 Get 4</p>
+                <p>Buy 1 Get 2</p>
                 <p>{{ 18 | currency:'USD' }} USD</p>
               </div>
             </div>
-            <p>Most popular</p>
+            <p class="right-section-text">Most popular</p>
           </div>
         </div>
       </ng-container>
       <ng-template #option1Clicked>
-        <input type="radio" name="option1" [checked]="option1Active" />
+        <div class="option-activated">
+          <div class="radio-option">
+            <label class="radio-input">
+              <input type="radio" name="option1" [checked]="option1Active"/>
+              <span class="radio-check"></span>
+            </label>
+            <div class="offer-text">
+              <p>Buy 1 Get 2 <span class="offer-rate">30% Off</span></p>
+              <p>{{ 18 | currency:'USD' }} USD <span class="prev-cost">{{ 10 | currency: 'USD'}}</span></p>
+            </div>
+          </div>
+          <form class="pref-section">
+            <h6></h6>
+            <h6>Size</h6>
+            <h6>Colour</h6>
+            <h6>#1</h6>
+            <select name="" id="">
+              <option value="volvo">S</option>
+            </select>
+            <select name="" id="">
+              <option value="volvo">Colour</option>
+            </select>
+            <h6>#2</h6>
+            <select name="" id="">
+              <option value="volvo">S</option>
+            </select>
+            <select name="" id="">
+              <option value="volvo">Colour</option>
+            </select>
+          </form>
+        </div>
       </ng-template>
     </div>
     <div class="mid-section-info">
